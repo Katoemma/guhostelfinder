@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Hostel Admin Dashboard - Hostel Booking</title>
+</head>
+
+<body class="flex bg-gray-100">
+  <!-- Sidebar -->
+  <aside class="bg-blue-500 text-white h-screen w-64 flex flex-col">
+    <div class="p-6">
+      <h2 class="text-xl font-semibold">Hostel Admin</h2>
+      <p class="text-gray-300">Welcome, John Doe</p>
+    </div>
+
+    <nav class="flex-1 px-6">
+      <ul class="space-y-2">
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Dashboard</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Hostel Information</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Room Management</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Bookings</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Payments</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Settings</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    <h1 class="text-2xl font-semibold mb-6">Hostel Information</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Hostel Details -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-lg font-semibold mb-4">Hostel Details</h3>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-gray-600">Hostel Name:</span>
+          <span class="font-semibold">ABC Hostel</span>
+        </div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-gray-600">Location:</span>
+          <span class="font-semibold">City, Country</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-gray-600">Total Rooms:</span>
+          <span class="font-semibold">50</span>
+        </div>
+      </div>
+
+      <!-- Room Availability -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-lg font-semibold mb-4">Room Availability</h3>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-gray-600">Total Rooms:</span>
+          <span class="font-semibold">50</span>
+        </div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-gray-600">Occupied Rooms:</span>
+          <span class="font-semibold">20</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-gray-600">Available Rooms:</span>
+          <span class="font-semibold">30</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

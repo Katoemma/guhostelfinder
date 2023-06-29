@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Hostel Booking</title>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-orange-600 py-4">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-white text-lg font-semibold">Hostel Booking</a>
+
+        <!-- Hamburger Icon -->
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle" class="block cursor-pointer md:hidden">
+          <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </label>
+
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="text-white">Home</a>
+          <a href="#" class="text-white">Hostels</a>
+          <a href="#" class="text-white">Login</a>
+          <a href="#" class="text-white">Sign Up</a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="menu md:hidden">
+        <a href="#" class="block text-white py-2">Home</a>
+        <a href="#" class="block text-white py-2">Hostels</a>
+        <a href="#" class="block text-white py-2">Login</a>
+        <a href="#" class="text-white">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center pt-12 md:pt-24 bg-gray-900">
+    <div class="px-4 mb-4 md:mb-2 flex flex-col md:flex-row ">
+      <div class=" mx-auto md:px-12 md:w-1/2">
+        <h1 class="text-orange-600 text-4xl md:text-6xl font-bold mb-6">Rent Your Perfect Hostel</h1>
+        <p class="text-white text-lg md:text-xl mb-8">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia excepturi, sunt perspiciatis at rerum qui in harum iste repellat blanditiis, suscipit repellendus fugit architecto nihil illo neque magni odio consectetur.
+        </p>
+        <form>
+          <div class="relative">
+              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </div>
+              <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Hostels" required>
+              <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+          </div>
+        </form>
+      </div>
+      <div class="hidden w-1/2 px-12 md:block">
+        <img src="undraw_booked_re_vtod.svg" class="h-96 mx-auto" alt="">
+      </div>
+    </div>
+  </section>
+
+  <hr class="border-2 border-orange-600 w-full mx-auto rounded-full">
+  <!-- hostels list with pagination -->
+  <section class="flex flex-col items-center  mx-auto py-4">
+    <!-- text container -->
+    <div class="flex flex-col p-4 gap-2 md:flex-row justify-between md:w-1/2 bg-white">
+      <div class="">
+        <h1 class="text-3xl text-center text-orange-600 font-medium font-serif md:hidden">
+          Check <strong>The Best</strong> <br>Hostels.
+        </h1>
+        <h1 class="hidden md:block text-3xl text-orange-600 font-medium font-serif">
+          Check <br> <strong>The Best</strong> <br>Hostels.
+        </h1>
+      </div>
+      <div class="text-center md:text-start md:w-1/3">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus autem ipsum impedit repudiandae, deserunt earum hic maiores culpa tempore blanditiis aspernatur quidem sunt laborum animi quasi, ullam, expedita dolor.
+        </p>
+      </div>
+      <div class="text-center">
+        <h6 class="font-bold">
+          Post and Add Hostel
+        </h6>
+        <ul class="list-none">
+          <li>+2567878787878</li>
+          <li>+2567878787878</li>
+          <li>+2567878787878</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- hostel cards -->
+    <div class="flex flex-col justify-between md:flex-row pt-12 gap-4">
+      <!-- hostel card 1 -->
+      <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+            <img class="p-8 rounded-t-lg w-96 h-64" src="wire.png" alt="product image" />
+        </a>
+        <div class="px-5 pb-5">
+            <a href="#">
+                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Mandela Hostel</h5>
+                <span class="font-serif font-bold text-gray-900 dark:text-white">Single & Double rooms</span>
+            </a>
+            <div class="flex items-center mt-2.5 mb-5">
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 p-2 bg-blue-50 rounded-lg">
+              <div>
+                <i class="fa fa-wifi"></i> Wifi
+              </div>
+              <div>
+                <i class="fa fa-shower"></i> Self contained
+              </div>
+              <div>
+                <i class="fa fa-book"></i> Reading Space
+              </div>
+              <div>
+                <i class="fa fa-camera-retro"></i> CCTV camera
+              </div>
+            </div>
+            <div class="flex items-center pt-2">
+                <a href="#" class="text-white w-full bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Check Availability</a>
+            </div>
+        </div>
+      </div>
+
+       <!-- hostel card 1 -->
+       <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+            <img class="p-8 rounded-t-lg w-96 h-64" src="wire.png" alt="product image" />
+        </a>
+        <div class="px-5 pb-5">
+            <a href="#">
+                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Mandela Hostel</h5>
+                <span class="font-serif font-bold text-gray-900 dark:text-white">Single & Double rooms</span>
+            </a>
+            <div class="flex items-center mt-2.5 mb-5">
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 p-2 bg-blue-50 rounded-lg">
+              <div>
+                <i class="fa fa-wifi"></i> Wifi
+              </div>
+              <div>
+                <i class="fa fa-shower"></i> Self contained
+              </div>
+              <div>
+                <i class="fa fa-book"></i> Reading Space
+              </div>
+              <div>
+                <i class="fa fa-camera-retro"></i> CCTV camera
+              </div>
+            </div>
+            <div class="flex items-center pt-2">
+                <a href="#" class="text-white w-full bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Check Availability</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- hostel card 1 -->
+      <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+            <img class="p-8 rounded-t-lg w-96 h-64" src="wire.png" alt="product image" />
+        </a>
+        <div class="px-5 pb-5">
+            <a href="#">
+                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Mandela Hostel</h5>
+                <span class="font-serif font-bold text-gray-900 dark:text-white">Single & Double rooms</span>
+            </a>
+            <div class="flex items-center mt-2.5 mb-5">
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 p-2 bg-blue-50 rounded-lg">
+              <div>
+                <i class="fa fa-wifi"></i> Wifi
+              </div>
+              <div>
+                <i class="fa fa-shower"></i> Self contained
+              </div>
+              <div>
+                <i class="fa fa-book"></i> Reading Space
+              </div>
+              <div>
+                <i class="fa fa-camera-retro"></i> CCTV camera
+              </div>
+            </div>
+            <div class="flex items-center pt-2">
+                <a href="#" class="text-white w-full bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Check Availability</a>
+            </div>
+      </div>
+    </div>  
+  </div>
+  <div class="flex justify-center p-4">
+    <a href="#" class="text-white bg-orange-600 px-4 py-1 rounded-lg font-bold">Load More</a>
+  </div>
+</section>
+<!-- newslatter -->
+<div class="2xl:mx-auto 2xl:container mx-4 py-16">
+  <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+  <div class="w-full relative flex items-center justify-center">
+    <img src="https://i.ibb.co/4sYZ8gC/img-2.png" alt="dining" class="w-full h-full absolute z-0 hidden xl:block" />
+    <img src="https://i.ibb.co/bbS3J9C/pexels-max-vakhtbovych-6301182-1.png" alt="dining" class="w-full h-full absolute z-0 hidden sm:block xl:hidden" />
+    <img src="https://i.ibb.co/JKkzGDs/pexels-max-vakhtbovych-6301182-1.png" alt="dining" class="w-full h-full absolute z-0 sm:hidden" />
+    <div class="bg-gray-800 bg-opacity-80 md:my-16 lg:py-16 py-10 w-full md:mx-24 md:px-12 px-4 flex flex-col items-center justify-center relative z-40">
+      <h1 class="text-4xl font-semibold leading-9 text-orange-600 text-center">Don’t miss out!</h1>
+      <p class="text-base leading-normal text-center text-white mt-6">
+        Subscribe to your newsletter to stay in the loop. Our newsletter is sent once in <br />
+        a week on every friday so subscribe to get latest news and updates.
+      </p>
+      <div class="sm:border rounded-lg border-orange-600 flex-col sm:flex-row flex items-center lg:w-5/12 w-full mt-12 space-y-4 sm:space-y-0">
+        <input class="border border-white sm:border-transparent text-base w-full font-medium leading-none text-white p-4 focus:outline-none bg-transparent placeholder-white" placeholder="Email Address" />
+        <button class="text-white rounded-r-lg focus:outline-none focus:ring-offset-2 focus:ring border border-orange-600 sm:border-transparent w-full sm:w-auto bg-orange-600 py-4 px-6 hover:bg-opacity-75">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="bg-orange-600 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <p>&copy; 2023 Hostel Booking. All rights reserved.</p>
+        <div class="mt-4">
+          <a href="#" class="text-white hover:text-gray-400 transition duration-300 ease-in-out">Terms of Service</a>
+          <span class="text-gray-600 mx-2">|</span>
+          <a href="#" class="text-white hover:text-gray-400 transition duration-300 ease-in-out">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    const toggle = document.getElementById('toggle');
+    const menu = document.querySelector('.menu');
+    toggle.addEventListener('change', () => {
+      menu.style.display = toggle.checked ? 'block' : 'none';
+    });
+  </script>
+</body>
+
+</html>

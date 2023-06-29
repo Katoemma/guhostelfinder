@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Hostel Admin Dashboard - Hostel Booking</title>
+</head>
+
+<body class="flex bg-gray-100">
+  <!-- Sidebar -->
+  <aside class="bg-blue-500 text-white h-screen w-64 flex flex-col">
+    <div class="p-6">
+      <h2 class="text-xl font-semibold">Hostel Admin</h2>
+      <p class="text-gray-300">Welcome, John Doe</p>
+    </div>
+
+    <nav class="flex-1 px-6">
+      <ul class="space-y-2">
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Dashboard</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Hostel Information</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Room Management</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Bookings</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Payments</a>
+        </li>
+        <li>
+          <a href="#" class="block p-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Settings</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    <h1 class="text-2xl font-semibold mb-6">Bookings</h1>
+
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <table class="w-full">
+        <thead>
+          <tr>
+            <th class="text-left font-semibold">Booking ID</th>
+            <th class="text-left font-semibold">Room Number</th>
+            <th class="text-left font-semibold">Guest Name</th>
+            <th class="text-left font-semibold">Check-in Date</th>
+            <th class="text-left font-semibold">Check-out Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="py-2">12345</td>
+            <td class="py-2">101</td>
+            <td class="py-2">John Doe</td>
+            <td class="py-2">2023-06-15</td>
+            <td class="py-2">2023-06-20</td>
+            <td class="text-right">
+              <button class="text-blue-500 hover:underline">View Details</button>
+              <button class="text-red-500 hover:underline">Cancel</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="py-2">23456</td>
+            <td class="py-2">102</td>
+            <td class="py-2">Jane Smith</td>
+            <td class="py-2">2023-06-18</td>
+            <td class="py-2">2023-06-23</td>
+            <td class="text-right">
+              <button class="text-blue-500 hover:underline">View Details</button>
+              <button class="text-red-500 hover:underline">Cancel</button>
+            </td>
+          </tr>
+          <!-- Additional rows can be added dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+
+</html>
